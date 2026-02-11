@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open home.html",
-            "file": "/Users/fedefernando/Documents/CS11001/webdev-portfolio/home.html"
+            "name": "Open index.html",
+            "file": "/Users/fedefernando/Documents/CS11001/webdev-portfolio/index.html"
         }
     ]
 }
