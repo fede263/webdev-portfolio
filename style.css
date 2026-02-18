@@ -1,12 +1,15 @@
-
-/* Just a single background colour for the whole site */
+/* Import fonts (headings and paragraphs) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+/* Basic page background */
 body{
 	margin:0;
 	background-color:#F8F9FA;
+	color:#111827;
+	font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	line-height:1.6;
 }
-
-/* Load a friendly display font for headings */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 /* Heading styles */
 h1{
@@ -19,6 +22,26 @@ h1{
 }
 @media(min-width:768px){
 	h1{ font-size:2.6rem; }
+}
+
+/* Heading level 3 styles */
+h3{
+	font-family: "Fugaz One", sans-serif;
+	font-weight: 600;
+	color: #0b3a66;
+	margin: .4rem 0 .8rem 0;
+	font-size: 1.25rem;
+}
+@media(min-width:768px){
+	h3{ font-size:1.5rem; }
+}
+
+/* Paragraph styles */
+p{ 
+    font-family: "DM Serif Text", serif;
+	font-size:1rem;
+	color:#1f2937; /* neutral dark */
+	margin:0 0 1rem 0;
 }
 
 /* Navbar styling */
@@ -44,6 +67,11 @@ footer.card-footer, .card-footer {
 }
 footer.card-footer a, .card-footer a {
 	color: #9fe8ff !important;
+}
+
+/* Ensure paragraph text inside footers is white */
+footer.card-footer p, .card-footer p {
+  color: #ffffff !important;
 }
 
 
