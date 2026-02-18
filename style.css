@@ -1,0 +1,42 @@
+/* Basic site stylesheet for three pages - use classes, not inline styles */
+:root{
+	--home-bg: #1d85e0 !important; /* aliceblue */
+	--about-bg: #63c915 !important; /* light green */
+	--portfolio-bg: #fff7ed !important; /* light peach */
+	--muted: #6b7280 !important;
+	--accent: #0b3a66 !important;
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;color:#111827;background:#fff}
+
+/* Page backgrounds (target body classes added in each HTML file) */
+body.page-home{background-color:var(--home-bg)}
+body.page-about{background-color:var(--about-bg)}
+body.page-portfolio{background-color:var(--portfolio-bg)}
+
+/* Layout helpers */
+.site-main{padding:1rem 0}
+.page-section{padding:2rem 0}
+
+/* Hero / intro */
+.hero{padding:2rem 0;text-align:center}
+.hero .title{font-size:1.8rem;color:var(--accent);margin:0 0 .5rem}
+.hero .subtitle{color:var(--muted);margin:0}
+
+/* Card utility (instead of repeating inline/bootstrap utilities) */
+.card-custom{background:#fff;padding:1rem;border-radius:.5rem;box-shadow:0 6px 18px rgba(16,24,40,.06)}
+
+/* Reusable image class to replace inline styles */
+.cover-img{height:200px;object-fit:cover;width:100%;display:block}
+
+/* Simple typography tweaks */
+.lead{color:var(--muted);font-size:1.05rem}
+
+/* Small responsive tweak */
+@media (min-width:768px){
+	.hero .title{font-size:2.4rem}
+}
+
+
