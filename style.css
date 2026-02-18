@@ -1,42 +1,52 @@
-/* Basic site stylesheet for three pages - use classes, not inline styles */
-:root{
-	--home-bg: #1d85e0 !important; /* aliceblue */
-	--about-bg: #63c915 !important; /* light green */
-	--portfolio-bg: #fff7ed !important; /* light peach */
-	--muted: #6b7280 !important;
-	--accent: #0b3a66 !important;
+
+/* Just a single background colour for the whole site */
+body{
+	margin:0;
+	background-color:#F8F9FA;
 }
 
-/* Reset / base */
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;color:#111827;background:#fff}
+/* Load a friendly display font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-/* Page backgrounds (target body classes added in each HTML file) */
-body.page-home{background-color:var(--home-bg)}
-body.page-about{background-color:var(--about-bg)}
-body.page-portfolio{background-color:var(--portfolio-bg)}
-
-/* Layout helpers */
-.site-main{padding:1rem 0}
-.page-section{padding:2rem 0}
-
-/* Hero / intro */
-.hero{padding:2rem 0;text-align:center}
-.hero .title{font-size:1.8rem;color:var(--accent);margin:0 0 .5rem}
-.hero .subtitle{color:var(--muted);margin:0}
-
-/* Card utility (instead of repeating inline/bootstrap utilities) */
-.card-custom{background:#fff;padding:1rem;border-radius:.5rem;box-shadow:0 6px 18px rgba(16,24,40,.06)}
-
-/* Reusable image class to replace inline styles */
-.cover-img{height:200px;object-fit:cover;width:100%;display:block}
-
-/* Simple typography tweaks */
-.lead{color:var(--muted);font-size:1.05rem}
-
-/* Small responsive tweak */
-@media (min-width:768px){
-	.hero .title{font-size:2.4rem}
+/* Heading styles */
+h1{
+	font-family: "Roboto Slab", serif;
+	font-weight: 700;
+	color: #0b3a66;
+	margin: .5rem 0;
+	line-height: 1.1;
+	font-size: 2rem;
 }
+@media(min-width:768px){
+	h1{ font-size:2.6rem; }
+}
+
+/* Navbar styling */
+.navbar{ background-color:#111827 !important; border-bottom:1px solid rgba(255,255,255,0.04); }
+.navbar .navbar-brand, .navbar .nav-link{ color:#e6eef8 !important; }
+.navbar .nav-link:hover, .navbar .nav-link:focus{ color:#9fe8ff !important; }
+
+/* Highlight the current page */
+.navbar .nav-link.active{
+	color:#66d9ff !important;
+	background: rgba(102,217,255,0.06) !important;
+	border-radius:6px;
+	font-weight:600;
+}
+
+.navbar-toggler{ border-color: rgba(255, 255, 255, 0.503) !important; }
+.navbar-toggler-icon{ filter: invert(100%) !important; }
+
+/* Footer color: match navbar */
+footer.card-footer, .card-footer {
+	background-color: #111827 !important;
+	color: #ffffff !important;
+}
+footer.card-footer a, .card-footer a {
+	color: #9fe8ff !important;
+}
+
+
+
 
 
